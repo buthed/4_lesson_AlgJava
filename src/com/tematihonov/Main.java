@@ -1,25 +1,22 @@
 package com.tematihonov;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
+        Random random = new Random();
         LinkedList<Cat> catLinkedList = new LinkedList<>();
-        catLinkedList.addAll(0, catsCollection);
-        catLinkedList.add(0, new Cat("Чижик", 3));
-        catLinkedList.addFirst(new Cat("Котик", 2));
-        catLinkedList.addLast(new Cat("Котик", 2));
-        catLinkedList.remove(0);
-        catLinkedList.set(0, cats[0]);
-        System.out.println(catLinkedList.contains(cats[1]));
-        cats[1] = catLinkedList.get(0);
-        cats[1].info();
-        for (Cat number : catLinkedList) {
-            number.info();
+        for (int i = 0; i < 10; i++) {
+            catLinkedList.add(new Cat("Cat"+i, random.nextInt(8)));
         }
+        System.out.println("Task 4.1");
+        Stack<Cat> catObj = new Stack<>();
+        System.out.println(catLinkedList.get(2).print());
+        catObj.push(new Cat("Боря", 2));
+        catObj.push(new Cat("Вася", 6));
+        catObj.push(new Cat("Сеня", 1));
+        catObj.push(new Cat("Игорь", 5));
+        catObj.pop().print();
     }
 }
