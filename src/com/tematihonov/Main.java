@@ -109,6 +109,22 @@ public class Main {
 
 
         System.out.println("Task 4.5 - Работа со стеком и очередью на базе связанного списка");
-        Queue q = new Queue();
+        Link.Queue1 queueTest = new Link.Queue1();
+        queueTest.insert("Василий",12);
+        queueTest.insert("Петр",20);
+
+        startTime = System.nanoTime();
+        queueTest.insert("Артем",30);
+        endTime = System.nanoTime() - startTime;
+        System.out.println("На выполнение метода insert в очереди на базе связанного списка ушло: " + endTime);
+
+        startTime = System.nanoTime();
+        queueTest.display();
+        endTime = System.nanoTime() - startTime;
+        System.out.println("На выполнение метода display в очереди на базе связанного списка ушло: " + endTime);
+
+
     }
+
+
 }
