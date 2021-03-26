@@ -9,7 +9,7 @@ public class Cat {
         this.age = age;
     }
 
-    public String print() {
-        return this.name + " имеет возраст " + this.age;
+    public void print() {
+        System.out.println("Кот " + this.name + " имеет возраст " + this.age);
     }
 }
